@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // task5
+    function VowelsAndNonVowels(String) {
+    const vowels = "aeiouAEIOU";
+    let vowelsInString = "";
+    let nonVowelsInString = "";
+
+    for (let i = 0; i < String.length; i++) {
+        if (vowels.includes(String[i])) {
+            vowelsInString += String[i];
+        } else {
+            nonVowelsInString += String[i];
+        }
+    }
+
+    console.log("Vowels: " + vowelsInString);
+    console.log("Non-vowels: " + nonVowelsInString);
+}
+    VowelsAndNonVowels("hello world");  
+    VowelsAndNonVowels("bhumi");  
+    VowelsAndNonVowels("nandhu");
+    VowelsAndNonVowels("janu");
+    
+    </script>
+</body>
+</html>

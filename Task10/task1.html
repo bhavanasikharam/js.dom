@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+        .product-list, .cart {
+      list-style-type: none;
+      padding: 0;
+      color:blueviolet;
+    }
+    .product, .cart-item {
+      margin: 18px 0;
+    }
+    .product button, .cart-item button {
+      margin-left: 20px;
+      color: brown;
+    }
+    .your, .cart {
+       color: rgb(234, 133, 11);
+    }
+    .yourcart, .cart-item button {
+        color: blue;
+        border: 30px;
+    }
+  </style>
+</head>
+<body><center>
+
+
+  <h1>Product List</h1>
+  <ul class="product-list">
+    <li class="product">
+      <span>Top - $500</span>
+      <button onclick="addToCart('Product 1', 100)">Add to Cart</button>
+    </li>
+    <li class="product">
+      <span>Saree - $905</span>
+      <button onclick="addToCart('Product 2', 305)">Add to Cart</button>
+    </li>
+    <li class="product">
+      <span>Kurthi Set - $650</span>
+      <button onclick="addToCart('Product 3', 800)">Add to Cart</button>
+    </li>
+  </ul>
+  <h2>Your Cart</h2>
+  <ul class="cart">
+  </ul>
+  <p>Total Price: $<span id="totalPrice">0</span></p>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    function updateCartDisplay() {
+    const cartList = document.querySelector('.cart');
+    const totalPriceElement = document.getElementById('totalPrice');
+
+    cartList.innerHTML = '';
+
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.classList.add('cart-item');
+        li.innerHTML = `${item.name} - $${item.price} 
+         <button onclick="removeFromCart(${index})">Remove</button>`;
+        cartList.appendChild(li);
+        totalPrice += item.price;
+    });
+
+    totalPriceElement.textContent = totalPrice;
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    function addToCart(productName, price) {
+   
+      cart.push({ name: productName, price: price });
+
+      updateCartDisplay();
+    }
+
+    function removeFromCart(index) {
+  
+      cart.splice(index, 1);
+
+      updateCartDisplay();
+    }
+      updateCartDisplay();
+  
+  </script>
+    </center>
+</body>
+</html>

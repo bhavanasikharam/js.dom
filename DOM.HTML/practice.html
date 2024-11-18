@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div class="child">content</div>
+    <div class="child">content</div>
+    <div class="child">content</div>
+<!--  -->
+    <button onclick="fun()">click me</button>
+    <button onclick="bg()">click here</button>
+     <div class="name">bhavana</div>
+     <div class="name">soni</div>
+     <div class="name">harika</div>   
+<!--  -->
+   
+  <script>
+     var divclass=document.getElementsByClassName("child");
+     divclass[0].style.color="blue";
+     divclass[1].style.color="orange";
+     divclass[2].style.color="red";  
+// ----
+     function fun(){
+        var div = document.querySelector(".name")
+        div.style.background="pink";
+     }
+
+//  how to create an element-----
+    var newel= document.createElement("h1")
+    newel.innerText="document object model";
+    newel.style.color="yellow";
+    newel.style.background="green";
+    // document.body.appendChild(newel);
+    console.log(newel);
+   document.body.appendChild(newel); 
+
+//----- 
+let arr=["black","silver","pink","orange"]
+var count=0;
+function bg(){
+    document.body.style.background=arr[count];
+    count++
+    if (arr.length-1==count);
+}
+
+// dom use to create resume---
+let mainname=document.createElement("h1");
+mainname.innerText="BHAVANA";
+mainname.style.color="red";
+mainname.style.textAlign="center";
+document.body.appendChild(mainname)
+// 
+let main=document.createElement("h3");
+main.innerText="object";
+main.style.textAlign="start";
+document.body.appendChild(main)
+// 
+var ul=document.createElement("ul");
+var li1=document.createElement("li");
+var li2=document.createElement("li");
+var li3=document.createElement("li");
+li1.innerHTML="html";
+li2.innerHTML="<b>"+"css"+"</b>";
+li3.innerHTML="<i>"+"js"+"</li>";
+document.body.appendChild(ul);
+ul.append(li1,li2,li3);
+
+</script>
+</body>
+</html>

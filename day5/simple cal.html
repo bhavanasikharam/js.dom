@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // task5 - Simple Calculator
+
+        var b = +prompt("input first num");
+        var c = +prompt("input the second num");
+        var operator = prompt("input operators. eg: '+', '-', '/', '*', '%' ");
+        switch(operator){
+            case '+':
+            console.log("num1 = "+b, "num2 = "+c);
+            console.log("num1 + num2 = "+ (b+c));
+            break;
+            case '-':
+            console.log("num1 = "+b, "num2 = "+c);
+            console.log("num1 + num2 = "+ (b-c));
+            break;
+            case '*':
+            console.log("num1 = "+b, "num2 = "+c);
+            console.log("num1 + num2 = "+ (b*c));
+            break;
+            case '/':
+            console.log("num1 = "+b, "num2 = "+c);
+            console.log("num1 + num2 = "+ (b/c));
+            break;
+            case '%':
+            console.log("num1 = "+b, "num2 = "+c);
+            console.log("num1 + num2 = "+ (b%c));
+            break;
+            default:
+                console.log("num1 = "+b, "num2 = "+c);
+                console.log("enter the operator");
+                 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <script>
+
+    // Task1:
+      console.log("number from 1 to 10");
+      for (var a=1; a<=10; a++){
+        console.log(a);
+      }
+
+    // Task2:
+      console.log("even number from 1 to 20");
+      for (var b=1; b<=20; b++){
+        if (b%2==0){
+            console.log(b);   
+        }
+      }
+
+    // Task3:
+      console.log("multiple 5  from 1 to 50");
+      for (var c=1; c<=50; c++){
+        if (c%5==0){
+            console.log(c); 
+        }
+      }
+
+    // Task4:
+      console.log("sum of 1st 100 natural numbers");
+      var sum=0;
+      for (var d=1; d<=100; d++){
+          sum+=d;
+        }
+      console.log(sum);
+      
+    // Task5:
+      console.log("1-10 numbers in reverse order");
+      for (var e=10; e>=1; e--){
+        console.log(e);
+      }
+
+    // Task6: 
+    console.log("capital letters");
+       for (i =65; i<=90; i++){
+        console.log(String.fromCharCode(i));
+    }
+    console.log("small letters");
+    for (i=97; i<=122; i++){
+        console.log(String.fromCharCode(i));
+    }
+       
+    //  Task7:
+       console.log("tables from 1 to 5");
+       for (var k=1; k<=5; k++){
+        console.log("table"+k);
+        for(l=1; l<=10; l++){
+            console.log(k+ "*" +l+ "=" + k*l);   
+        }
+        console.log();
+       }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .parent{
+       display: grid;
+       grid-template-columns: auto auto auto;
+    }
+    .parent>div{
+        border:1px solid rebeccapurple;
+        padding: 3%;
+    }
+</style>
+</head>
+<body>
+    <div class="parent" id="parent"></div>
+    <script>
+        const parent=document.getElementById('parent');
+        async function executor() {
+            let res=await fetch("")
+            let data=await res.json();
+            let newdata=data.map((val)=>{
+                var child=document.createElement("div");
+                var childa=document.createElement("div");
+                var childb=document.createElement("div");
+                var childc=document.createElement("div");
+                var btn=document.createElement("button");
+                btn.innerText="click me";
+                // btn.addEventListener("click",()={
+                //     console.log(val);
+                //     localStorage.setItem("shoppingdata",JSON.stringify(val))
+                // window.open("")   
+                })
+            })
+
+        }
+    </script>
+</body>
+</html>

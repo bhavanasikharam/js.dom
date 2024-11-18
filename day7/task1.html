@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // task1-even number in an string
+        var a=234546937;
+        var b=String(a)
+        var evensum=0;
+        var oddsum=0;
+        for (i=0; i<b.length; i++){
+            if ( Number(b[i])%2==0){
+                console.log(b[i]);
+                evensum+= Number(b[i])  
+            }
+            else{
+                oddsum+= Number(b[i])
+            }
+        }
+        console.log(evensum,oddsum);
+
+
+        // task2-even number in an array
+         evensum=0
+         oddsum=0
+         var c=[23,54,67,64,46,95,98]
+         for (i=0; i<c.length; i++){
+           if (c[i]%2==0){
+            evensum+=c[i]
+           }
+           else{
+            oddsum+=c[i]
+           }
+         }
+        console.log("evensum"+"="+evensum);
+        console.log("oddsum"+"="+oddsum);
+        
+
+        // task3-table
+        for (i=1; i<=10; i++){
+        for(j=1; j<=10; j++){
+            var a= i+"*"+ j+ "=" +i*j;
+            console.log(a);  
+        }
+       }
+       
+    </script>
+</body>
+</html>

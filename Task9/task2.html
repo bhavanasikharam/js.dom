@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .profile-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+    }
+    .profile-info {
+      margin-bottom: 15px;
+    }
+    .profile-info strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .profile-info span {
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="profile-container">
+  <h2>Profile</h2>
+  <div class="profile-info">
+    <strong>Username:</strong>
+    <span id="profileUsername">Loading...</span>
+  </div>
+  <div class="profile-info">
+    <strong>Password:</strong>
+    <span id="profilePassword">Loading...</span>
+  </div>
+</div>
+
+<script>
+  // Get the username and password from localStorage
+  const username = localStorage.getItem('username');
+  const password = localStorage.getItem('password');
+
+  // Display the user's details
+  document.getElementById('profileUsername').textContent = username ? username : 'Not logged in';
+  document.getElementById('profilePassword').textContent = password ? password : 'Not available';
+</script>
+
+</body>
+</html>

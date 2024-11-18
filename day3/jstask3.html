@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // comparision operators
+    var a="hello"
+    var b="hello"
+    console.log(a=b);
+    var a="A"
+    var b="a"
+    console.log(a===b);
+    var a="20";
+    var b=20;
+    console.log(a==b);
+    var c=65;
+    var d=45;
+    console.log(c>d);
+    console.log(c<d);
+    console.log(c!==d);
+    console.log(c>=d);
+    console.log(c<=d);
+    console.log(c!=d);
+
+    // logical operators
+    var a=98;
+    var b=67;
+    console.log(a==b && a<=b);
+    console.log(false || true);
+    var a=true;
+    var b=true;
+    console.log(true && true);
+    console.log(true && false);
+    console.log(false && true);
+    console.log(false && false);
+
+    // ternary operator
+    var a=54;
+    var b=a<b ? "equal":"not equal";
+    console.log(b);
+     
+    number=prompt('give a value')
+    b=(number %5 ==0) ? "even":"odd";
+    console.log(b);
+
+    // adult
+    var a=+prompt("take a num")
+    var b=a<=18? "eqalified exam":"disqualified exam";
+    console.log(b);
+    
+    
+</script>
+</body>
+</html>

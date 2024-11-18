@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// task1-sum of numbers
+        const numbers = [1, 2, 3, 4, 5];
+        const sum = numbers.reduce((accumulator, currentValue) => {
+         return accumulator + currentValue;
+          }, 0); 
+        console.log(sum);
+
+
+// task2-calculate the average
+        const number = [1, 2, 3, 4, 5];
+        // Calculate the sum using reduce
+        const sum1 = number.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+        }, 0);
+       // Calculate the average
+       const average = sum1 / numbers.length;
+       console.log(average); // Output: 3
+
+
+// task3-find adults
+       const people = [
+          { name: "John", age: 17 },
+          { name: "Jane", age: 22 },
+          { name: "Jim", age: 15 },
+          { name: "Jack", age: 19 }
+        ];
+       // Filter to get people who are 18 or older
+      const adults = people.filter(person => person.age >= 18);
+      console.log(adults);
+
+    </script>
+</body>
+</html>
